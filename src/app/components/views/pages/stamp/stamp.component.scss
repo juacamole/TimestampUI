@@ -1,0 +1,17 @@
+.site__wrapper {
+    height: 100%;
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stamp__wrapper {
+    border-radius: 1vw;
+    z-index: 1;
+    width: 30vw;
+    height: 80%;
+    background-color: #D7BEA8;
+    border: 0.3vh solid #744253;
+    box-shadow: #744253 0 0 10vw;
+}

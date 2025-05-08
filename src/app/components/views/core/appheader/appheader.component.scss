@@ -1,22 +1,25 @@
 .app-header {
-    left: 2%;
-    position: fixed;
+    font-size: 2vh;
     display: flex;
     align-items: center;
-    padding: 5px 0;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #dee2e6;
-    max-height: 70px;
-    width: 96%;
-    margin: 0 auto;
-    box-shadow: #343a40 0px 0px 5px 2px;
+    background-color: #C78283;
+    border-bottom: 0.3vh solid #744253;
+    border-top: 0.3vh solid #744253;
+    box-shadow: #744253 0 0 10vh;
+    max-height: 7vh;
+    width: 100vw;
+}
+
+.app-header h1 {
+    font-size: 4vh;
+    font-weight: bold;
 }
 
 .app-header__logo {
-    padding: 5px;
-    margin-left: 20px;
-    max-width: 60px;
-    max-height: 60px;
+    padding: 0.3vh;
+    margin-left: 2vw;
+    width: 6vh;
+    height: 6vh;
     cursor: pointer;
 }
 
@@ -24,5 +27,5 @@
     font-size: 1.5rem;
     font-weight: bold;
     color: #343a40;
-    margin-left: 30px;
+    margin-left: 2.5vw;
 }

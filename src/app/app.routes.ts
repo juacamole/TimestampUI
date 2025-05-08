@@ -13,5 +13,8 @@ export const routes: Routes = [
     {
         path: 'dashboard',
         loadComponent: () => import('./components/views/pages/dashboard/dashboard.component').then(m => m.DashboardComponent)
+    },
+    {path: 'stamp',
+        loadComponent: () => import('./components/views/pages/stamp/stamp.component').then(m => m.StampComponent)
     }
 ];
