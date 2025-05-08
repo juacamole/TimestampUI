@@ -1,26 +1,25 @@
 .stamp-button {
     position: absolute;
-    background-color: #F194B4;
+    background-color: #DDDDDD;
     border-radius: 5vh;
-    box-shadow: inset 1vh 1vh 2.5vh #F194B4, inset -1vh -1vh 2.5vh #ffffff;
-    color: #ffffff;
+    box-shadow: inset 1vh 1vh 2.5vh #DDDDDD, inset -1vh -1vh 2.5vh #ffffff;
     cursor: pointer;
     font-size: 2vh;
     padding: 1vh 4vh;
     transition: all 0.1s ease-in-out;
-    border: 0.5vh solid #F194B4;
+    border: 0.5vh solid #DDDDDD;
   }
   
   .stamp-button:hover {
-    box-shadow: inset 1vh 1vh 2.5vh #F194B4, inset -1vh -1vh 2.5vh #ffffff, 0.5vh 0.5vh 5px #F194B4, -0.5vh -0.5vh 1.25vh #ffffff;
+    box-shadow: inset 1vh 1vh 2.5vh #DDDDDD, inset -1vh -1vh 2.5vh #ffffff, 0.5vh 0.5vh 5px #DDDDDD, -0.5vh -0.5vh 1.25vh #ffffff;
   }
   
   .stamp-button:focus {
     outline: none;
-    box-shadow: inset 1vh 1vh 2.5vh #F194B4, inset -1vh -1vh 2.5vh #ffffff, 0.5vh 0.5vh 5px #F194B4, -0.5vh -0.5vh 1.25vh #ffffff;
+    box-shadow: inset 1vh 1vh 2.5vh #DDDDDD, inset -1vh -1vh 2.5vh #ffffff, 0.5vh 0.5vh 5px #DDDDDD, -0.5vh -0.5vh 1.25vh #ffffff;
   }
 
   .stamp-button:active {
-    box-shadow: inset 1vh 1vh 2.5vh #F194B4, inset -1vh -1vh 2.5vh #ffffff, 0.5vh 0.5vh 5px #F194B4, -0.5vh -0.5vh 1.25vh #ffffff;
-    background-color: #ee588c;
+    box-shadow: inset 1vh 1vh 2.5vh #DDDDDD, inset -1vh -1vh 2.5vh #ffffff, 0.5vh 0.5vh 5px #DDDDDD, -0.5vh -0.5vh 1.25vh #ffffff;
+    background-color: #CCCCCC;
   }
