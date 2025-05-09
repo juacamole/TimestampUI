@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { AppheaderComponent } from "../../core/appheader/appheader.component";
 
 @Component({
   selector: 'app-dashboard',
-  imports: [AppheaderComponent],
+  imports: [],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

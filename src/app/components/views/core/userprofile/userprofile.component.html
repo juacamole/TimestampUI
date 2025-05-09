@@ -1,6 +1,10 @@
-<div class="userprofile__wrapper">
+<div *appIsInRoles="[AppRoles.User]" (click)="changeShow()" class="userprofile__wrapper">
+
     <mat-icon class="userprofile__icon">verified_user</mat-icon>
     <div class="userprofile__name">
         <h1>dddddd</h1>
     </div>
+</div>
+<div *ngIf="show">
+    <app-userprofile-dropdown/>
 </div>

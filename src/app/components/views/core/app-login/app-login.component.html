@@ -1,0 +1,7 @@
+
+ <button *ngIf="isAuthenticated()" (click)="logout()" mat-button>
+    Logout
+  </button>
+  <button *ngIf="!isAuthenticated()" (click)="login()" mat-button>
+    Login
+  </button>

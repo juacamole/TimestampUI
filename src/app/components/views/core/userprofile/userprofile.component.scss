@@ -1,13 +1,16 @@
 .userprofile__wrapper {
+  background-color: #DDDDDD;
+  cursor: pointer;
   display: flex;
-  flex-direction: row;
   align-items: center;
+  justify-content: center;
   gap: 1vw;
   right: 0;
   top: 0;
   position: absolute;
   padding: 0 1vh;
-  max-height: 4vw;
+  max-height: 7.4vh;
+  width: 12vw;
 }
 
 mat-icon {
