@@ -4,6 +4,8 @@ import { MatIcon } from '@angular/material/icon';
 import { MatChip } from '@angular/material/chips';
 import { AppAuthService } from "../../../services/app.auth.service";
 import { MatButton } from '@angular/material/button';
+import { Router} from '@angular/router';
+
 
 @Component({
     selector: 'app-login',
@@ -17,6 +19,7 @@ export class AppLoginComponent implements OnInit {
   useralias = ''
 
   constructor(
+    private router: Router,
     private authService : AppAuthService
   ) {}
 
@@ -30,7 +33,7 @@ export class AppLoginComponent implements OnInit {
   }
 
   public login () {
-    this.authService.login()
+    this.authService.login();
   }
 
   public logout () {

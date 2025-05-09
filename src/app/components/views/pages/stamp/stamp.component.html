@@ -1,5 +1,20 @@
 <div class="site__wrapper">
     <div class="stamp__wrapper">
-        <app-stampbutton></app-stampbutton>
+      <button (click)="stamp()" class="stamp-button">Stamp</button>
+        <h1>{{ workTime }}</h1>
+        <h1>{{ workTimeLeft }}</h1>
+        <h1>{{ status }}</h1>
+      <div class="stamp__container">
+        <div class="stamp__list">
+            <ul>
+              <li *ngFor="let evenStamp of evenStamps">{{ evenStamp }}</li>
+            </ul>
+          </div>
+        <div class="stamp__list">
+          <ul>
+            <li *ngFor="let oddStamp of oddStamps">{{ oddStamp }}</li>
+          </ul>
+        </div>
+      </div>
     </div>
-</div> 
+  </div>

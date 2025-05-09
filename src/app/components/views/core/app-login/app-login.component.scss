@@ -1,13 +1,17 @@
 button {
     position: absolute;
+    right: 1.5vw;
     background-color: #DDDDDD;
     border-radius: 5vh;
     box-shadow: inset 1vh 1vh 2.5vh #DDDDDD, inset -1vh -1vh 2.5vh #ffffff;
     cursor: pointer;
     font-size: 2vh;
     padding: 1vh 4vh;
+    width: 10vw;
+    height: 6vh;
     transition: box-shadow 0.2s ease-in-out;
     border: 0.5vh solid #DDDDDD;
+    margin-top: 1vh;
   }
   
   button:hover {

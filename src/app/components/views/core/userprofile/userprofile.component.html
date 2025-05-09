@@ -1,8 +1,8 @@
-<div *appIsInRoles="[AppRoles.User]" (click)="changeShow()" class="userprofile__wrapper">
+<div (click)="changeShow()" class="userprofile__wrapper">
 
-    <mat-icon class="userprofile__icon">verified_user</mat-icon>
+    <mat-icon *appIsInRoles="[AppRoles.User]" class="userprofile__icon">verified_user</mat-icon>
     <div class="userprofile__name">
-        <h1>dddddd</h1>
+        <h1>{{ userAlias }}</h1>
     </div>
 </div>
 <div *ngIf="show">

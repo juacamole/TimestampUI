@@ -13,7 +13,7 @@ export const routes: Routes = [
     },
     {
         path: 'home',
-        loadComponent: () => import('./components/views/pages/home/home.component').then(m => m.HomeComponent)
+        loadComponent: () => import('./components/views/pages/home/home.component').then(m => m.HomeComponent),
     },
     {
         path: 'dashboard',
