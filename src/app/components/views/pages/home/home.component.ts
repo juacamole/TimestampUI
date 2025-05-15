@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { AppAuthService } from '../../../services/app.auth.service';
 
 @Component({
   selector: 'app-home',
@@ -12,16 +13,14 @@ import { Router, RouterModule } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  constructor(private router: Router) { }
-  showMessage: boolean = false;
-
-  onClick(): void {
-    this.showMessage = !this.showMessage;
-    console.log('Button clicked!');
-  }
+  constructor(private router: Router, private authService: AppAuthService) {}
 
     async navigate() {
         await this.router.navigate(['/stamp']);
         window.location.reload();
+    }
+
+    isAuthenticated() {
+        return this.authService.isAuthenticated();
     }
 }

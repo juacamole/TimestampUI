@@ -8,11 +8,11 @@ import {BehaviorSubject, Observable, of} from 'rxjs';
 })
 export class AppAuthService {
   private jwtHelper: JwtHelperService = new JwtHelperService();
-  private usernameSubject: BehaviorSubject<string> = new BehaviorSubject('');
+  private usernameSubject = new BehaviorSubject<string>('');
   public readonly usernameObservable: Observable<string> = this.usernameSubject.asObservable();
-  private useraliasSubject: BehaviorSubject<string> = new BehaviorSubject('');
+  private useraliasSubject = new BehaviorSubject<string>('');
   public readonly useraliasObservable: Observable<string> = this.useraliasSubject.asObservable();
-  private accessTokenSubject: BehaviorSubject<string> = new BehaviorSubject('');
+  private accessTokenSubject = new BehaviorSubject<string>('');
   public readonly accessTokenObservable: Observable<string> = this.accessTokenSubject.asObservable();
 
   constructor(
@@ -44,9 +44,9 @@ export class AppAuthService {
     });
   }
 
-  public getRoles(): Observable<Array<string>> {
+  public getRoles(): Observable<string[]> {
     if (this._decodedAccessToken !== null) {
-      return new Observable<Array<string>>(observer => {
+      return new Observable<string[]>(observer => {
         if (this._decodedAccessToken.resource_access.Timestamp.roles) {
           if (Array.isArray(this._decodedAccessToken.resource_access.Timestamp.roles)) {
             const resultArr = this._decodedAccessToken.resource_access.Timestamp.roles.map((r: string) => r.replace('ROLE_', ''));

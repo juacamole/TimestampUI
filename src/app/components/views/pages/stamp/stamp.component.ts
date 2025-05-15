@@ -19,12 +19,12 @@ export class StampComponent implements OnInit {
     this.getStatus();
   }
 
-  workTime: String = '00:00:00';
-  workTimeLeft: String = '00:00:00';
-  status: String = 'N/A';
-  stamps: String[] = [];
-  oddStamps: String[] = [];
-  evenStamps: String[] = [];
+  workTime = '00:00:00';
+  workTimeLeft = '00:00:00';
+  status = 'N/A';
+  stamps: string[] = [];
+  oddStamps: string[] = [];
+  evenStamps: string[] = [];
 
   stamp() {
     this.service.stamp().subscribe((response) => {
@@ -36,6 +36,7 @@ export class StampComponent implements OnInit {
       this.oddStamps.reverse();
       this.evenStamps.reverse();
     });
+    window.location.reload();
   }
 
   getStamps() {

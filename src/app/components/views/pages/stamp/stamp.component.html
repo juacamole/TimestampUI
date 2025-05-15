@@ -1,9 +1,20 @@
 <div class="site__wrapper">
     <div class="stamp__wrapper">
       <button (click)="stamp()" class="stamp-button">Stamp</button>
-        <h1>{{ workTime }}</h1>
-        <h1>{{ workTimeLeft }}</h1>
-        <h1>{{ status }}</h1>
+      <div class="stamp__display-wrapper">
+        <div class="stamp__display-worktime">
+          <h1>Work Time</h1>
+          <h1>{{ workTime }}</h1>
+        </div>
+        <div class="stamp__display-worktimeleft">
+          <h1>Work Time Left</h1>
+          <h1>{{ workTimeLeft }}</h1>
+        </div>
+        <div class="stamp__display-status">
+          <h1>Status</h1>
+          <h1>{{ status }}</h1>
+        </div>
+      </div>
       <div class="stamp__container">
         <div class="stamp__list">
             <ul>

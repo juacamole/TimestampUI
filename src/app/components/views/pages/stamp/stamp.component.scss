@@ -56,6 +56,30 @@
   transition: max-height 0.3s ease-in-out;
 }
 
+.stamp__display-wrapper {
+  margin-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3vh;
+}
+
+.stamp__display-worktime,
+.stamp__display-worktimeleft,
+.stamp__display-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.stamp__display-worktime h1,
+.stamp__display-worktimeleft h1,
+.stamp__display-status h1 {
+  font-size: 2vh;
+}
+
 .stamp-button {
   position: absolute;
   background-color: #DDDDDD;
@@ -81,3 +105,12 @@
   box-shadow: inset 1vh 1vh 2.5vh #DDDDDD, inset -1vh -1vh 2.5vh #ffffff, 0.5vh 0.5vh 0.5vh #DDDDDD, -0.5vh -0.5vh 1.25vh #ffffff;
   background-color: #CCCCCC;
   }
+
+  li {
+    font-size: 2vh;
+  }
+
+  ul {
+    margin: 0;
+  } 
+

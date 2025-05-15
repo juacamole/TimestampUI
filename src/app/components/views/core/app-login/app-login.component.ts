@@ -1,17 +1,14 @@
 import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { MatIcon } from '@angular/material/icon';
-import { MatChip } from '@angular/material/chips';
-import { AppAuthService } from "../../../services/app.auth.service";
-import { MatButton } from '@angular/material/button';
 import { Router} from '@angular/router';
+import { AppAuthService } from "../../../services/app.auth.service";
 
 
 @Component({
     selector: 'app-login',
     templateUrl: './app-login.component.html',
     styleUrls: ['./app-login.component.scss'],
-    imports: [MatIcon, NgIf, MatChip,MatButton],
+    imports: [NgIf],
 })
 export class AppLoginComponent implements OnInit {
 

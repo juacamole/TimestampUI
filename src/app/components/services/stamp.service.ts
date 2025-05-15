@@ -19,12 +19,12 @@ export class StampService {
     return this.http.get<Stamp[]>(environment.backendBaseUrl + 'stamp');
   }
 
-  public getWorkTime(): Observable<{ workTime: String }> {
-    return this.http.get<{ workTime: String }>(environment.backendBaseUrl + 'stamp/worktime');
+  public getWorkTime(): Observable<{ workTime: string }> {
+    return this.http.get<{ workTime: string }>(environment.backendBaseUrl + 'stamp/worktime');
   }
 
-  public getWorkTimeLeft(): Observable<{ workTimeLeft: String }> {
-    return this.http.get<{ workTimeLeft: String }>(environment.backendBaseUrl + 'stamp/worktimeleft');
+  public getWorkTimeLeft(): Observable<{ workTimeLeft: string }> {
+    return this.http.get<{ workTimeLeft: string }>(environment.backendBaseUrl + 'stamp/worktimeleft');
   } 
 
   public getStatus(): Observable<string> {

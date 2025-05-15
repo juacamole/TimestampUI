@@ -1,26 +1,4 @@
-@import './app/components/views/dialogs/dialog-styles.scss';
-
-body {
-    background-color: #EEEEEE;
-    margin: 0;
-    height: 100vh;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-} 
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-* {
-    color: #FFFFFF;
-    font-family: 'Brush Script MT', cursive;
-}
-
-html, body { height: 100vh; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+// Dialog container styles
 .cdk-overlay-pane.add-user-dialog,
 .cdk-overlay-pane.edit-user-dialog {
     width: 70vw !important;
@@ -44,69 +22,85 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     margin: 0 !important;
 }
 
+// Material Dialog overrides
 .mat-mdc-dialog-container {
     --mdc-dialog-container-shape: 1vh !important;
+    --mdc-dialog-container-elevation-shadow: none !important;
 }
 
-.mat-mdc-dialog-surface {
-    border-radius: 1vh !important;
-}
-
-
+// Shared dialog content styles
 .add-user-dialog,
 .edit-user-dialog {
-    
+    // Dialog title
     h2[mat-dialog-title] {
         font-size: 2.5vh !important;
-        margin: 2vh !important;
-        padding: 1vh 2vh !important;
+        margin: 0 !important;
+        padding: 2vh !important;
         color: #aaaaaa !important;
         height: 5vh !important;
         display: flex !important;
         align-items: center !important;
+        border-bottom: 0.2vh solid #dddddd !important;
     }
 
-
+    // Form layout
     .form-container {
         padding: 2vh !important;
         gap: 2vh !important;
+        display: flex !important;
+        flex-direction: column !important;
     }
 
+    // Form field styling
     mat-form-field {
         width: 100% !important;
         font-size: 2vh !important;
         line-height: 2.5vh !important;
+        height: 11vh !important;
 
         .mat-mdc-form-field-flex {
             height: 7vh !important;
-            padding: 0 2vh !important;
         }
 
         .mat-mdc-form-field-infix {
-            padding: 1vh 0 !important;
+            padding: 0 !important;
             min-height: 7vh !important;
+            border-top: 0 !important;
         }
 
+        // Label styling
         .mdc-floating-label {
             font-size: 2vh !important;
             color: #bbbbbb !important;
+            top: 50% !important;
+            transform: translateY(-50%) !important;
+            transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) !important;
         }
 
-        .mat-mdc-form-field-label-wrapper {
-            top: -0.5vh !important;
+        .mdc-floating-label--float-above {
+            transform: translateY(-130%) scale(0.75) !important;
         }
 
-        .mdc-text-field--outlined {
-            --mdc-outlined-text-field-container-height: 7vh !important;
+        // Error and hint area
+        .mat-mdc-form-field-subscript-wrapper {
+            height: 3vh !important;
+            padding: 0 !important;
+            position: static !important;
+            display: flex !important;
+            align-items: center !important;
         }
 
+        // Input element
         input.mat-mdc-input-element {
             font-size: 2vh !important;
             color: #aaaaaa !important;
             height: 5vh !important;
             line-height: 5vh !important;
+            margin: 0 !important;
+            padding: 1vh 2vh !important;
         }
 
+        // Field outline
         .mdc-notched-outline {
             .mdc-notched-outline__leading,
             .mdc-notched-outline__notch,
@@ -117,22 +111,30 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
         }
     }
 
-      .time-inputs {
+    // Time inputs container
+    .time-inputs {
         display: flex !important;
         gap: 2vh !important;
-        margin: 1vh 0 !important;
+        margin: 0 !important;
+        padding: 1vh 0 !important;
+        height: 11vh !important;
 
         mat-form-field {
             flex: 1 !important;
         }
     }
 
+    // Dialog actions
     mat-dialog-actions {
         padding: 2vh !important;
+        height: 9vh !important;
         min-height: 9vh !important;
+        max-height: 9vh !important;
         margin: 0 !important;
         gap: 2vh !important;
+        border-top: 0.2vh solid #dddddd !important;
 
+        // Action buttons
         button.dialog-button {
             height: 5vh !important;
             min-width: 15vh !important;
@@ -140,18 +142,24 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             font-size: 2vh !important;
             border-radius: 2.5vh !important;
             border: 0.2vh solid #dddddd !important;
+            margin: 0 !important;
 
             mat-icon {
                 font-size: 2.5vh !important;
                 height: 2.5vh !important;
                 width: 2.5vh !important;
                 line-height: 2.5vh !important;
+                margin: 0 !important;
             }
         }
     }
 
+    // Error messages
     mat-error {
         font-size: 1.8vh !important;
-        margin-top: 0.5vh !important;
+        line-height: 2vh !important;
+        height: 2vh !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
-}
+} 

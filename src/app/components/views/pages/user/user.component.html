@@ -1,0 +1,28 @@
+<div class="site__wrapper">
+    <button class="add-user-button" (click)="openAddDialog()">
+        <mat-icon>add</mat-icon>
+        Add User
+    </button>
+    <div class="summaries-container">
+        <details *ngFor="let user of users" class="user-summary">
+            <summary>{{user.username}}</summary>
+            <div class="user-details">
+                <div class="user-details-container">
+                    <p><strong>ID:</strong> {{user.id}}</p>
+                    <p><strong>Full Name:</strong> {{user.firstname}} {{user.lastname}}</p>
+                    <p><strong>Work Time:</strong> {{formatWorkTime(user.workhours, user.workminutes)}}</p>
+                </div>
+                <div class="button-container">
+                    <button class="edit-user-button" (click)="openEditDialog(user)">
+                        <mat-icon>edit</mat-icon>
+                        Edit
+                    </button>
+                    <button class="delete-user-button" (click)="deleteUser(user, $event)">
+                        <mat-icon>delete</mat-icon>
+                        Delete
+                    </button>
+                </div>
+            </div>
+        </details>
+    </div>
+</div>

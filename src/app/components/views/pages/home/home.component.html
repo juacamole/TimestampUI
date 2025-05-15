@@ -1,4 +1,11 @@
-<p>home works!</p>
-<button (click)="onClick()" type="button">Click me</button>
-<p *ngIf="showMessage">Hello, World!</p>
-<button (click)="navigate()" type="button">Go to Stamp</button>
+<div class="site__wrapper">
+    <h1>Welcome to the Home Page</h1>
+
+<p *ngIf="isAuthenticated()">
+    You can now visit the Stamp page:
+</p>
+<button *ngIf="isAuthenticated()" (click)="navigate()" class="stamp-button" type="button">Go to Stamp</button>
+  <p *ngIf="!isAuthenticated()">
+    Please login to visit other pages.
+  </p>
+</div>

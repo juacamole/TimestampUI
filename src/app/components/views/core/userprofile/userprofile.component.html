@@ -1,4 +1,10 @@
-<div (click)="changeShow()" class="userprofile__wrapper">
+<div 
+    tabindex="0"
+    (click)="changeShow()" 
+    (keydown.enter)="changeShow()"
+    (keydown.space)="$event.preventDefault(); changeShow()"
+    role="button"
+    class="userprofile__wrapper">
 
     <mat-icon *appIsInRoles="[AppRoles.User]" class="userprofile__icon">verified_user</mat-icon>
     <div class="userprofile__name">

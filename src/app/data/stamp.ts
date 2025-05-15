@@ -4,8 +4,8 @@ export class Stamp {
     user!: {
         "id": number,
         "username": string,
-        "firstName": string,
-        "lastName": string,
+        "firstname": string,
+        "lastname": string,
         "workhours": number,
         "workminutes": number,
     }
