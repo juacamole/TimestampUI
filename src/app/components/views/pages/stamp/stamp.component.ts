@@ -2,15 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { StampService } from '../../../services/stamp.service';
 import { Stamp } from '../../../../data/stamp';
 import { CommonModule } from '@angular/common';
+import { NavigationService } from '../../../../services/navigation.service';
 
 @Component({
   selector: 'app-stamp',
+  standalone: true,
   imports: [CommonModule],
   templateUrl: './stamp.component.html',
   styleUrls: ['./stamp.component.scss']
 })
 export class StampComponent implements OnInit {
-  constructor(private service: StampService) { }
+  constructor(
+    private service: StampService,
+    private navigationService: NavigationService
+  ) { }
 
   ngOnInit(): void {
     this.getStamps();
@@ -28,15 +33,13 @@ export class StampComponent implements OnInit {
 
   stamp() {
     this.service.stamp().subscribe((response) => {
-
       this.stamps = response.map((stamp: Stamp) => stamp.time);
-
       this.oddStamps = this.stamps.filter((_, index) => index % 2 !== 0);
       this.evenStamps = this.stamps.filter((_, index) => index % 2 === 0);
       this.oddStamps.reverse();
       this.evenStamps.reverse();
     });
-    window.location.reload();
+    this.navigationService.reload();
   }
 
   getStamps() {
@@ -51,19 +54,18 @@ export class StampComponent implements OnInit {
 
   getWorkTime() {
     this.service.getWorkTime().subscribe((response) => {
-      this.workTime = response.toString();
+      this.workTime = response.workTime;
     });
   }
 
   getWorkTimeLeft() {
     this.service.getWorkTimeLeft().subscribe((response) => {
-      this.workTimeLeft = response.toString();
+      this.workTimeLeft = response.workTimeLeft;
     });
   }
 
   getStatus() {
     this.service.getStatus().subscribe((response) => {
-      console.log(response);
       this.status = response;
     });
   }

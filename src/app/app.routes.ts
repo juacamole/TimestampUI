@@ -3,7 +3,6 @@ import { StampComponent } from './components/views/pages/stamp/stamp.component';
 import { appCanActivate } from './guard/app.auth.guard';
 import { NoAccessComponent } from './components/views/pages/no-access/no-access.component';
 import { AppRoles } from './app.roles';
-// import { HomeComponent } from './components/views/home/home.component';
 
 export const routes: Routes = [
     {
@@ -14,10 +13,6 @@ export const routes: Routes = [
     {
         path: 'home',
         loadComponent: () => import('./components/views/pages/home/home.component').then(m => m.HomeComponent),
-    },
-    {
-        path: 'dashboard',
-        loadComponent: () => import('./components/views/pages/dashboard/dashboard.component').then(m => m.DashboardComponent)
     },
     {
         path: 'stamp',

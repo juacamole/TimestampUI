@@ -135,7 +135,7 @@ export class EditUserDialogComponent {
   }
 
   showFormErrors(): void {
-    let errorMessages: string[] = [];
+    const errorMessages: string[] = [];
     
     Object.keys(this.userForm.controls).forEach(key => {
       const control = this.userForm.get(key);

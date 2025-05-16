@@ -5,7 +5,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { User } from "../../../../data/user";
 
 @Component({
   selector: 'app-add-user-dialog',
@@ -133,7 +132,7 @@ export class AddUserDialogComponent {
   }
 
   showFormErrors(): void {
-    let errorMessages: string[] = [];
+    const errorMessages: string[] = [];
     
     Object.keys(this.userForm.controls).forEach(key => {
       const control = this.userForm.get(key);
